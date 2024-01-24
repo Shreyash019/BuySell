@@ -2,7 +2,7 @@ import React from 'react'
 
 const HomeScreen = () => {
   return (
-    <div>HomeScreen</div>
+    <div className='w-[100%] h-[200vh] bg-black'>HomeScreen</div>
   )
 }
 

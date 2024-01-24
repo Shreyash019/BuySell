@@ -1,6 +1,8 @@
+import EntryScreen from "./screens/Home/Entry_Screen";
 function App() {
   return (
-    <div className="text-4xl font-bold">
+    <div>
+      <EntryScreen/>
     </div>
   );
 }

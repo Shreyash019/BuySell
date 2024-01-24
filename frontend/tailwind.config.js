@@ -2,7 +2,23 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'sm': { 'min': '300px', 'max': '599px' },
+        // => @media (min-width: 640px and max-width: 767px) { ... 
+  
+        'md':{
+          'min': '600px', 'max': '850px'
+        },
+  
+        'lg': { 'min': '951px' },
+        // => @media (min-width: 1024px and max-width: 1279px) { ... }
+      },
+      colors: {
+        "subNav": "#ffe0b3",
+        "sideNav": "#404040",
+      }
+    },
   },
   plugins: [],
 }
