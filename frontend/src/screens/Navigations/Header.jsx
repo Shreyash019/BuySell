@@ -21,7 +21,7 @@ const Header = () => {
       <div className='w-[100%] h-12 float-left'>
         <div className='w-auto h-full flex items-center justify-center'>
           <div className='w-[15%] sm:w-[25%] h-auto float-left flex items-center justify-center'>
-            <span className='bg-black text-white rounded-full px-4 py-2'>Buy & Sell</span>
+            <span className='bg-black text-white sm:text-xs rounded-full px-4 py-2'>Buy & Sell</span>
           </div>
           <div className='w-[85%] sm:w-[75%] h-auto float-left bg-white text-black flex items-center justify-end'>
             <div className='w-[100%] h-auto text-3xl font-bold px-4 flex items-center justify-end'>
