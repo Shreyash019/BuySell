@@ -17,8 +17,8 @@ const Header = () => {
 
   }, [navActive])
   return (
-    <div className='w-[100%] h-auto overflow-auto'>
-      <div className='w-[100%] h-16 sm:h-12 float-left'>
+    <div className='w-[100%] h-auto overflow-auto fixed bg-white'>
+      <div className='w-[100%] h-12 float-left'>
         <div className='w-auto h-full flex items-center justify-center'>
           <div className='w-[15%] sm:w-[25%] h-auto float-left flex items-center justify-center'>
             <span className='bg-black text-white rounded-full px-4 py-2'>Buy & Sell</span>
@@ -30,7 +30,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className='w-[100%] h-8 float-left bg-subNav flex items-center justify-center'>
+      <div className='w-[100%] h-6 float-left bg-subNav flex items-center justify-center'>
 
       </div>
       {navActive
