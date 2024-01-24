@@ -30,7 +30,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className='w-[100%] h-6 float-left bg-subNav flex items-center justify-center'>
+      <div className='w-[100%] h-8 float-left bg-subNav flex items-center justify-center'>
 
       </div>
       {navActive
