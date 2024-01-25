@@ -17,6 +17,9 @@ module.exports = {
       colors: {
         "subNav": "#ffe0b3",
         "sideNav": "#404040",
+        "borderColor": "#f2f2f2",
+        "productBackground": "#f0f5f5",
+        "showProductSold": "#00ff00"
       }
     },
   },
