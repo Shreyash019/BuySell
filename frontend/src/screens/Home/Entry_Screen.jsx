@@ -8,12 +8,14 @@ import SoldProducts from '../Product/User_Sold_Products';
 import BoughtProducts from '../Product/User_Bought_Products';
 import AllOrders from '../Orders/All_Orders';
 import Footer from '../Navigations/Footer';
+import Authenticarion from '../User/Authenticarion';
 
 
 const Entry_Screen = () => {
   return (
     <>
       <Header />
+      <Authenticarion/>
       <HomeScreen />
       <ProductScreen/>
       <SingleProduct/>
