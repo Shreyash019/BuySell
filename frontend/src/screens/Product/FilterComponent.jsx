@@ -4,7 +4,7 @@ const FilterComponent = () => {
     return (
         <div>
             {/* Filter Start */}
-            <div className='lg:w-[19%] sm:w-[96%] min-h-[40rem] lg:mx-[0.5%] mx-[2%] h-auto mb-8 lg:mb-0 float-left py-8 lg:px-4 px-8 rounded-xl bg-white border border-borderColor shadow-lg shadow-borderColor overflow-auto'>
+            <div className='lg:w-[19%] md:w-[26%] sm:w-[96%] min-h-[40rem] mx-[0.5%] sm:mx-[2%] h-auto mb-8 lg:mb-0 float-left py-8 px-4 sm:px-8 rounded-xl bg-white border border-borderColor shadow-lg shadow-borderColor overflow-auto'>
                 <div className='w-[100%] h-auto mb-16'>
                     <h1 className='text-2xl font-bold mb-8'>Category</h1>
                     <div className='w-[100%] h-auto flex items-center justify-start my-4'>

@@ -34,10 +34,10 @@ const HomeScreen = () => {
       </div>
       <div className='w-[100%] h-auto float-left flex flex-wrap items-start justify-center overflow-auto mb-20'>
         <p className='w-[100%] h-auto py-6 mt-8 md:mt-8 sm:mt-4 text-4xl md:text-3xl sm:text-2xl font-bold text-center'>Available Products</p>
-        <div className='w-[66%] h-auto py-2 my-2 text-xs font-semibold text-black flex items-center justify-end'>
+        <div className='w-[80%] h-auto py-2 my-2 text-xs font-semibold text-black flex items-center justify-end'>
           <span className='px-2 py-1.5 rounded-2xl border border-subNav hover:border-borderColor hover:bg-borderColor hover:text-black'>Veiw All</span>
         </div>
-        <div className='w-auto h-auto pb-12 grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6 sm:gap-4'>
+        <div className='w-auto h-auto pb-12 grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-10 sm:gap-6'>
           {numMap.map((data)=>{
             return(
               <ShowProducts key={data} numData={data} />

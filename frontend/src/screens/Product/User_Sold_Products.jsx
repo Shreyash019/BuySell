@@ -13,8 +13,8 @@ const User_Sold_Products = () => {
     <div>
       {/* Product Start */}
       <div className='w-[100%]  min-h-[40rem] h-auto float-left flex flex-wrap items-start justify-center overflow-auto'>
-        <p className='w-[86%] h-auto mb-4 text-4xl md:text-3xl sm:text-2xl font-bold text-start'>Sold Products</p>
-        <div className='w-auto h-auto py-8 grid grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-8 md:gap-6 sm:gap-4'>
+        <p className='w-[70%] h-auto mb-4 text-4xl md:text-3xl sm:text-2xl font-bold text-start'>Sold Products</p>
+        <div className='w-auto h-auto py-8 grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-10 sm:gap-6'>
           {numMap.map((data) => {
             return (
               <ShowProducts key={data} numData={'sold'} />
