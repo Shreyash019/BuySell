@@ -5,7 +5,8 @@ import ProductScreen from '../Product/Available_Products';
 import SingleProduct from '../Product/Single_Product';
 import MyProducts from '../Product/User_My_Product';
 import SoldProducts from '../Product/User_Sold_Products';
-import BoughtProducts from '../Product/User_Bought_Products'
+import BoughtProducts from '../Product/User_Bought_Products';
+import Footer from '../Navigations/Footer';
 
 
 const Entry_Screen = () => {
@@ -18,6 +19,7 @@ const Entry_Screen = () => {
       <MyProducts/>
       <SoldProducts/>
       <BoughtProducts/>
+      <Footer/>
     </>
 
   )
