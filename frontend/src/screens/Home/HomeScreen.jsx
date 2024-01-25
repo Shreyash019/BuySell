@@ -24,10 +24,12 @@ const HomeScreen = () => {
   return (
     <div className='w-[100%] h-auto overflow-auto bg-productBackground'>
       <div className='w-full h-[36rem] md:h-[28rem] sm:h-[16rem] float-left flex items-center justify-center'>
-        <div className={`w-[100%] h-[36rem] md:h-[28rem] sm:h-[16rem] flex`}>
-          <img className='w-[100%] h-full' src={bgCol} alt='bgImage' title='bgImage'/>
-          <div className='w-[5%] h-[36rem] md:h-[28rem] sm:h-[16rem] mr-[95%] float-start text-white text-2xl animate-pulse absolute flex items-center justify-center' onClick={()=>handleCorosal()}><MdOutlineArrowBackIosNew/></div>
-          <div className='w-[5%] h-[36rem] md:h-[28rem] sm:h-[16rem] ml-[95%] float-start text-white text-2xl animate-pulse absolute flex items-center justify-center' onClick={()=>handleCorosal()}><MdOutlineArrowForwardIos/></div>
+        <div className={`w-[100%] h-[36rem] md:h-[28rem] sm:h-[16rem] bg-cover bg-center bg-no-repeat`} style={{backgroundImage: `url(${bgCol})`}}>
+          <div className='w-[5%] h-[36rem] md:h-[28rem] sm:h-[16rem] float-start text-white text-2xl flex items-center justify-center' onClick={()=>handleCorosal()}><MdOutlineArrowBackIosNew/></div>
+          <div className='w-[90%] h-[36rem] lg:px-20 md:px-12 sm:px-8 md:h-[28rem] sm:h-[16rem] float-start text-white text-2xl flex items-center justify-center'>
+            <p className='text-6xl md:text-4xl sm:text-3xl text-white font-bold break-word'>Buying and Selling product is now a game.</p>
+          </div>
+          <div className='w-[5%] h-[36rem] md:h-[28rem] sm:h-[16rem] float-right text-white text-2xl flex items-center justify-center' onClick={()=>handleCorosal()}><MdOutlineArrowForwardIos/></div>
         </div>
       </div>
       <div className='w-[100%] h-auto float-left flex flex-wrap items-start justify-center overflow-auto mb-20'>

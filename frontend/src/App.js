@@ -3,7 +3,7 @@ import EntryScreen from "./screens/Home/Entry_Screen";
 
 function App() {
   return (
-    <div>
+    <div className='select-none'>
       <EntryScreen/>
       <Toaster/>
     </div>
