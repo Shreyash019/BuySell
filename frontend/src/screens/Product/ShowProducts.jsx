@@ -12,7 +12,7 @@ const ShowProducts = ({ key, numData }) => {
         } else if (numData === 'sold') {
             setActionType('sold')
         }
-    }, [actionType])
+    }, [actionType, numData])
 
     return (
         <div key={key} className='w-48 md:w-40 sm:w-36 h-56 md:h-48 sm:h-44 bg-white rounded-xl shadow-lg border border-borderColor'>

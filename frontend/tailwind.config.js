@@ -22,6 +22,7 @@ module.exports = {
         "showProductSold": "#99ffbb",
         "orderLink": "#33cccc",
         "footerBackground": "#1a1a1a",
+        "comTitle": "#ffe0b3"
       }
     },
   },
