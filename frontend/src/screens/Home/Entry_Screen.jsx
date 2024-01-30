@@ -9,12 +9,18 @@ import BoughtProducts from '../Product/User_Bought_Products';
 import AllOrders from '../Orders/All_Orders';
 import Footer from '../Navigations/Footer';
 import Authenticarion from '../User/Authenticarion';
+import PasswordRecovery from '../User/Password_Recovery';
+import PasswordUpdate from '../User/Password_Update';
+import UserProfile from '../User/User_Profile'
 
 
 const Entry_Screen = () => {
   return (
     <>
       <Header />
+      <UserProfile/>
+      <PasswordUpdate/>
+      <PasswordRecovery/>
       <Authenticarion/>
       <HomeScreen />
       <ProductScreen/>
