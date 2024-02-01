@@ -11,13 +11,17 @@ import Footer from '../Navigations/Footer';
 import Authenticarion from '../User/Authenticarion';
 import PasswordRecovery from '../User/Password_Recovery';
 import PasswordUpdate from '../User/Password_Update';
-import UserProfile from '../User/User_Profile'
+import UserProfile from '../User/User_Profile';
+import NewProductUpload from '../Product/New_Product_Upload';
+import MySingleProduct from '../Product/My_Single_Product';
 
 
 const Entry_Screen = () => {
   return (
     <>
       <Header />
+      <NewProductUpload/>
+      <MySingleProduct/>
       <UserProfile/>
       <PasswordUpdate/>
       <PasswordRecovery/>

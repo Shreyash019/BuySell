@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CiStar } from "react-icons/ci";
 
-const ShowProducts = ({ key, numData }) => {
+const ShowProducts = ({numData }) => {
     const [randomImage, setRandomImage] = useState();
     const [actionType, setActionType] = useState()
 
@@ -15,7 +15,7 @@ const ShowProducts = ({ key, numData }) => {
     }, [actionType, numData])
 
     return (
-        <div key={key} className='w-48 md:w-40 sm:w-36 h-56 md:h-48 sm:h-44 bg-white rounded-xl shadow-lg border border-borderColor'>
+        <div key={1} className='w-48 md:w-40 sm:w-36 h-56 md:h-48 sm:h-44 bg-white rounded-xl shadow-lg border border-borderColor'>
             <div className='w-[100%] h-auto'>
             <div className='w-[100%] h-36 md:h-28 sm:h-24 p-3 overflow-hidden'>
                     <img className='w-[100%] h-36 md:h-28 sm:h-24 rounded-md float-left' src={randomImage} alt='productImage' title='productImage' />
