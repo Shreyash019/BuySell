@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate} from 'react-router-dom';
 import { CiStar } from "react-icons/ci";
 
 const ShowProducts = () => {
+
+    const navigate = useNavigate()
     const [randomImage, setRandomImage] = useState()
     useEffect(() => {
         setRandomImage('https://assets.ajio.com/medias/sys_master/root/20220601/ddAf/62967eccaeb26921affef4b2/-473Wx593H-464415501-multi-MODEL.jpg')
     }, [])
     return (
-        <div className='w-48 md:w-40 sm:w-36 h-56 md:h-48 sm:h-44 m-2 bg-white rounded-xl shadow-lg border border-borderColor'>
+        <div className='w-48 md:w-40 sm:w-36 h-56 md:h-48 sm:h-44 m-2 bg-white rounded-xl shadow-lg border border-borderColor' onClick={()=>navigate('/singleproduct')}>
             <div className='w-[100%] h-auto'>
                 <div className='w-[100%] h-36 md:h-28 sm:h-24 p-3 overflow-hidden'>
                     <img className='w-[100%] h-36 md:h-28 sm:h-24 rounded-md' src={randomImage} alt='productImage' title='productImage' />

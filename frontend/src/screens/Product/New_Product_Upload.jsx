@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { FaPlus } from "react-icons/fa6";
 import { AiFillDelete } from "react-icons/ai";
+import { VscCloudUpload } from "react-icons/vsc";
 import toast from 'react-hot-toast'
 
 const New_Product_Upload = () => {
@@ -50,33 +52,50 @@ const New_Product_Upload = () => {
                         <div className={`w-[23rem] h-[20rem] md:h-[18rem] sm:h-[16rem] border border-sideNav rounded-sm bg-[length:24rem_20rem] bg-center bg-no-repeat overflow-hidden flex ${productImage[0] ? 'items-start justify-end' : 'items-center justify-center'}`} style={{ backgroundImage: `url(${productImage[0] || defaultImg})` }}>
                             {productImage[0]
                                 ? <span className='text-sm text-white bg-black rounded-full p-1' onClick={(e) => handleImageDelete(e, productImage[0])}><AiFillDelete /></span>
-                                : <p className='text-[0.5rem'>Image 1</p>
+                                : <div className='text-8xl text-imgBgColorHover animate-pulse'>
+                                    <p className='text-center'><VscCloudUpload /></p>
+                                    <p className='text-center text-sm'>Upload Image</p>
+                                </div>
                             }
                         </div>
                     </div>
                     <div className='w-[100%] h-auto flex flex-wrap items-center justify-center'>
-                        <div className={`w-20 h-20 m-2 border border-sideNav rounded-sm overflow-hidden flex ${productImage[3] ? 'items-start justify-end' : 'items-center justify-center'} bg-[length:5rem_5rem] bg-center bg-no-repeat`} style={{ backgroundImage: `url(${productImage[1] || defaultImg})` }}>
+                        <div className='w-20 h-20 m-2 border border-sideNav rounded-sm overflow-hidden flex items-center justify-center bg-[length:5rem_5rem] bg-center bg-no-repeat' style={{ backgroundImage: `url(${productImage[1] || defaultImg})` }}>
                             {productImage[1]
-                                ? <span className='text-sm text-white bg-black rounded-full p-1' onClick={(e) => handleImageDelete(e, productImage[1])}><AiFillDelete /></span>
-                                : <p className='text-[0.5rem'>Image 2</p>
+                                ? <span className='text-sm text-white bg-black rounded-full p-1 cursor-pointer' onClick={(e) => handleImageDelete(e, productImage[1])}><AiFillDelete /></span>
+                                : <div className='w-[100%] h-auto text-2xl text-imgBgColorHover animate-pulse'>
+                                    <p className='w-[100%] h-auto text-center flex items-center justify-center'><VscCloudUpload /></p>
+                                    <p className='w-auto h-text-[0.5rem] text-center text-[0.5rem]'>Upload Image</p>
+                                </div>
                             }
                         </div>
-                        <div className={`w-20 h-20 m-2 border border-sideNav rounded-sm overflow-hidden flex ${productImage[3] ? 'items-start justify-end' : 'items-center justify-center'} bg-[length:5rem_5rem] bg-center bg-no-repeat`} style={{ backgroundImage: `url(${productImage[2] || defaultImg})` }}>
+                        <div className='w-20 h-20 m-2 border border-sideNav rounded-sm overflow-hidden flex items-center justify-center bg-[length:5rem_5rem] bg-center bg-no-repeat' style={{ backgroundImage: `url(${productImage[2] || defaultImg})` }}>
                             {productImage[2]
-                                ? <span className='text-sm text-white bg-black rounded-full p-1' onClick={(e) => handleImageDelete(e, productImage[2])}><AiFillDelete /></span>
-                                : <p className='text-[0.5rem'>Image 3</p>
+                                ? <span className='text-sm text-white bg-black rounded-full p-1 cursor-pointer' onClick={(e) => handleImageDelete(e, productImage[2])}><AiFillDelete /></span>
+                                : <div className='w-[100%] h-auto text-2xl text-imgBgColorHover animate-pulse'>
+                                    <p className='w-[100%] h-auto text-center flex items-center justify-center'><VscCloudUpload /></p>
+                                    <p className='w-auto h-text-[0.5rem] text-center text-[0.5rem]'>Upload Image</p>
+                                </div>
                             }
                         </div>
-                        <div className={`w-20 h-20 m-2 border border-sideNav rounded-sm overflow-hidden flex ${productImage[3] ? 'items-start justify-end' : 'items-center justify-center'} bg-[length:5rem_5rem] bg-center bg-no-repeat`} style={{ backgroundImage: `url(${productImage[3] || defaultImg})` }}>
+                        <div className='w-20 h-20 m-2 border border-sideNav rounded-sm overflow-hidden flex items-center justify-center bg-[length:5rem_5rem] bg-center bg-no-repeat' style={{ backgroundImage: `url(${productImage[3] || defaultImg})` }}>
                             {productImage[3]
-                                ? <span className='text-sm text-white bg-black rounded-full p-1' onClick={(e) => handleImageDelete(e, productImage[3])}><AiFillDelete /></span>
-                                : <p className='text-[0.5rem'>Image 4</p>
+                                ? <span className='text-sm text-white bg-black rounded-full p-1 cursor-pointer' onClick={(e) => handleImageDelete(e, productImage[3])}><AiFillDelete /></span>
+                                : <div className='w-[100%] h-auto text-2xl text-imgBgColorHover animate-pulse'>
+                                    <p className='w-[100%] h-auto text-center flex items-center justify-center'><VscCloudUpload /></p>
+                                    <p className='w-auto h-text-[0.5rem] text-center text-[0.5rem]'>Upload Image</p>
+                                </div>
                             }
                         </div>
                         <div className={`w-20 h-20 m-2 border border-sideNav rounded-sm overflow-hidden flex items-center justify-center bg-[length:5rem_5rem] bg-center bg-no-repeat ${productImage[5] ? 'blur-[0.5px]' : ''}`} style={{ backgroundImage: `url(${productImage[4] || defaultImg})` }}>
                             {productImage[5]
                                 ? <span className='text-4xl text-black'><FaPlus /></span>
-                                : <>{productImage[4] ? '' : <p className='text-[0.5rem'>Image 5</p>}</>
+                                : <>{productImage[4] ? ''
+                                    : <div className='w-[100%] h-auto text-2xl text-imgBgColorHover animate-pulse'>
+                                        <p className='w-[100%] h-auto text-center flex items-center justify-center'><VscCloudUpload /></p>
+                                        <p className='w-auto h-text-[0.5rem] text-center text-[0.5rem]'>Upload Image</p>
+                                    </div>
+                                }</>
                             }
                         </div>
                     </div>
@@ -121,7 +140,7 @@ const New_Product_Upload = () => {
                                     </select>
                                 </div>
                                 <div className='w-[47%] h-auto float-left overflow-auto'>
-                                <label htmlFor='subCategory' className='w-[100%] h-auto float-left text-sm font-semibold'>Sub Category:</label>
+                                    <label htmlFor='subCategory' className='w-[100%] h-auto float-left text-sm font-semibold'>Sub Category:</label>
                                     <select id='subCategory' className='w-[100%] h-auto float-left text-xs px-2 py-1 outline-none border border-imgBgColorHover rounded-xl appearance-none cursor-pointer truncate overflow-hidden'>
                                         <option className='text-xs truncate overflow-hidden'>--Select--</option>
                                         <option className='text-xs truncate overflow-hidden'>Select1</option>
@@ -139,6 +158,7 @@ const New_Product_Upload = () => {
                     </div>
                 </div>
             </div>
+            <Helmet> <title>Buy&Sell | New Product Upload</title></Helmet>
         </div>
     )
 }

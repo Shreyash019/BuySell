@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'
 import { CiStar } from "react-icons/ci";
 
 const ShowProducts = ({numData }) => {
+
+    const navigate = useNavigate()
     const [randomImage, setRandomImage] = useState();
     const [actionType, setActionType] = useState()
 
@@ -15,7 +18,7 @@ const ShowProducts = ({numData }) => {
     }, [actionType, numData])
 
     return (
-        <div key={1} className='w-48 md:w-40 sm:w-36 h-56 md:h-48 sm:h-44 bg-white rounded-xl shadow-lg border border-borderColor'>
+        <div key={1} className='w-48 md:w-40 sm:w-36 h-56 md:h-48 sm:h-44 bg-white rounded-xl shadow-lg border border-borderColor' onClick={()=>navigate('/mysingleproduct')}>
             <div className='w-[100%] h-auto'>
             <div className='w-[100%] h-36 md:h-28 sm:h-24 p-3 overflow-hidden'>
                     <img className='w-[100%] h-36 md:h-28 sm:h-24 rounded-md float-left' src={randomImage} alt='productImage' title='productImage' />

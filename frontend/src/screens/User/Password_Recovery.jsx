@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import ForgotPassword from './Forgot_Password';
 import ResetPassword from './Reset_Password';
 
@@ -22,6 +23,7 @@ const Password_Recovery = () => {
           <div className='w-[40%] md:w-[60%] sm:w-[94%] min-h-[15rem] h-auto my-20 pb-8 bg-white rounded-2xl border border-borderColor shadow-xl shadow-borderColor overflow-auto'>
               <div className='p-4'>{activeComponent === 'forgot' ? <ForgotPassword handleForgotSubmit={handleForgotSubmit}/> : <ResetPassword/>}</div>
           </div>
+          <Helmet> <title>Buy&Sell | {activeComponent === 'forgot'?  "Forgot Password" : "Reset Password"}</title></Helmet> 
       </div>
     )
   }

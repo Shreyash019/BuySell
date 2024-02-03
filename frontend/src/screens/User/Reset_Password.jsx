@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Reset_Password = () => {
   return (
@@ -20,7 +20,6 @@ const Reset_Password = () => {
         <button className='px-4 py-1 text-sm text-white font-semibold bg-black border border-sideNav hover:border-borderColor rounded-xl'>Submit</button>
         </div>
       </div>
-
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import toast from 'react-hot-toast';
+import { Helmet } from 'react-helmet';
 import { TiArrowRepeat } from "react-icons/ti";
 
 
@@ -41,6 +42,7 @@ const All_Orders = () => {
           </div>
         </div>
       </div>
+      <Helmet> <title>Buy&Sell | Orders</title></Helmet>
     </div>
   )
 }

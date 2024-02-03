@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import ProfileUpdate from './User_Profile_Update';
 import ShowProfile from './ShowProfile';
 
@@ -21,6 +22,7 @@ const User_Profile = () => {
       <div className='w-[100%] h-auto overflow-auto'>
         {isEdit ? <ProfileUpdate/> : <ShowProfile/>}
       </div>
+      <Helmet> <title>Buy&Sell | {isEdit ? 'Profile Update': 'Profile'}</title></Helmet>
     </div>
   )
 }
