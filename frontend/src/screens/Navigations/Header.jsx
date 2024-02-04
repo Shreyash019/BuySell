@@ -122,8 +122,9 @@ const Header = () => {
         </div>
         {navActive
           ?
-          <div className='w-[100%] h-auto overflow-auto absolute'>
-            <div className='w-[30%] md:w-[40%] sm:w-[70%] min-h-screen h-auto ml-[70%] md:ml-[60%] sm:ml-[30%] fixed bg-sideNav backdrop-blur-sm overflow-auto'>
+          <div className='w-[100%] h-auto overflow-auto fixed'>
+            <div className='w-[70%] md:w-[60%] sm:w-[30%] min-h-screen h-auto float-left backdrop-blur-[0.5px]'></div>
+            <div className='w-[30%] md:w-[40%] sm:w-[70%] min-h-screen h-auto ml-[70%] md:ml-[60%] sm:ml-[30%] absolute bg-sideNav overflow-auto'>
               <div className='w-[100%] h-12 flex items-center justify-end px-4 text-3xl text-white'>
                 <IoMdCloseCircleOutline onClick={() => setNavActive(false)} />
               </div>
@@ -178,11 +179,10 @@ const Header = () => {
                   <p className='text-white text-base font-medium' onClick={() => handleSideNavNavigation('passwordchange')}>Password Change</p>
                 </div>
               </div>
-
               <div className='w-[100%] h-16 float-left py-4 flex items-center justify-center bottom-0 absolute'>
                 <div className='w-[30%] h-auto py-2 rounded-2xl bg-black mx-4 text-white font-bold text-sm flex items-center justify-center cursor-pointer' onClick={() => handleSideNavNavigation('auth')}>Sign Up</div>
                 <div className='w-[30%] h-auto py-2 rounded-2xl bg-black mx-4 text-white font-bold text-sm flex items-center justify-center cursor-pointer' onClick={() => handleSideNavNavigation('auth')}>Sign In</div>
-                <div className='w-auto h-auto py-1 px-4 rounded-2xl mx-4 text-white font-bold text-base border border-subNav flex items-center justify-center hover:bg-black hover:border-none'><p>Logout</p>&nbsp;<p className='text-xl'><IoLogOutOutline /></p></div>
+                {/* <div className='w-auto h-auto py-1 px-4 rounded-2xl mx-4 text-white font-bold text-base border border-subNav flex items-center justify-center hover:bg-black hover:border-none'><p>Logout</p>&nbsp;<p className='text-xl'><IoLogOutOutline /></p></div> */}
               </div>
             </div>
           </div>
