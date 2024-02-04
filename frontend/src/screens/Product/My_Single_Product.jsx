@@ -3,6 +3,7 @@ import { FaPlus } from "react-icons/fa6";
 
 const My_Single_Product = () => {
 
+    const defaultImg = 'https://sendbird.imgix.net/cms/20230621_Tips-for-developing-a-successful-ecommerce-app-blog-cover.png';
     const [count, setCount] = useState(0);
 
     const handleProductCarCount = (e, bType) => {
@@ -22,17 +23,16 @@ const My_Single_Product = () => {
                 </div>
                 <div className='w-[50%] sm:w-[100%] h-auto float-left overflow-auto'>
                     <div className='w-[94%] h-auto m-[3%] flex items-center justify-center'>
-                        <div className='w-[80%] sm:w-[100%] h-auto'>
-                            <img className='w-[100%] h-[20rem] md:h-[18rem] sm:h-[16rem] border border-sideNav rounded-sm' src='https://sendbird.imgix.net/cms/20230621_Tips-for-developing-a-successful-ecommerce-app-blog-cover.png' alt='product1' title='prodcut1' />
+                        <div className='w-[80%] sm:w-[100%] h-auto px-1 flex items-center justify-center'>
+                            <div className='w-[23rem] h-[20rem] md:w-[21rem] md:h-[18rem] sm:w-[18rem]  sm:h-[15rem] border border-sideNav rounded-sm bg-[length:24rem_20rem] bg-center bg-no-repeat overflow-hidden' style={{ backgroundImage: `url(${defaultImg})` }}></div>
                         </div>
                     </div>
                     <div className='w-[100%] h-auto flex flex-wrap items-center justify-center'>
-                        <img className='w-20 h-20 m-2 border border-sideNav rounded-sm' src='https://sendbird.imgix.net/cms/20230621_Tips-for-developing-a-successful-ecommerce-app-blog-cover.png' alt='product1' title='prodcut1' />
-                        <img className='w-20 h-20 m-2 border border-sideNav rounded-sm' src='https://sendbird.imgix.net/cms/20230621_Tips-for-developing-a-successful-ecommerce-app-blog-cover.png' alt='product1' title='prodcut1' />
-                        <img className='w-20 h-20 m-2 border border-sideNav rounded-sm' src='https://sendbird.imgix.net/cms/20230621_Tips-for-developing-a-successful-ecommerce-app-blog-cover.png' alt='product1' title='prodcut1' />
-                        <div className='w-20 h-20 m-2 border border-sideNav rounded-sm overflow-hidden flex items-center justify-center'>
-                            <img className='w-20 h-20' src='https://sendbird.imgix.net/cms/20230621_Tips-for-developing-a-successful-ecommerce-app-blog-cover.png' alt='product1' title='prodcut1' />
-                            <span className='absolute text-4xl text-white'><FaPlus /></span>
+                        <div className='w-20 h-20 m-2 border border-sideNav rounded-sm overflow-hidden flex items-center justify-center bg-[length:5rem_5rem] bg-center bg-no-repeat' style={{ backgroundImage: `url(${defaultImg})` }}></div>
+                        <div className='w-20 h-20 m-2 border border-sideNav rounded-sm overflow-hidden flex items-center justify-center bg-[length:5rem_5rem] bg-center bg-no-repeat' style={{ backgroundImage: `url(${defaultImg})` }}></div>
+                        <div className='w-20 h-20 m-2 border border-sideNav rounded-sm overflow-hidden flex items-center justify-center bg-[length:5rem_5rem] bg-center bg-no-repeat' style={{ backgroundImage: `url(${defaultImg})` }}></div>
+                        <div className='w-20 h-20 m-2 border border-sideNav rounded-sm overflow-hidden flex items-center justify-center bg-[length:5rem_5rem] bg-center bg-no-repeat' style={{ backgroundImage: `url(${defaultImg})` }}>
+                            <span className='text-4xl text-white'><FaPlus /></span>
                         </div>
                     </div>
                 </div>

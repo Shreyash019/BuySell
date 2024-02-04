@@ -15,6 +15,7 @@ import PasswordUpdate from './screens/User/Password_Update';
 import UserProfile from './screens/User/User_Profile';
 import NewProductUpload from './screens/Product/New_Product_Upload';
 import MySingleProduct from './screens/Product/My_Single_Product';
+import UserCart from "./screens/Orders/User_Cart";
 
 import TermCondition from "./screens/Utility/TermCondition";
 import PrivacyPolicy from "./screens/Utility/PrivacyPolicy";
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       { path: 'mysingleproduct', element: <MySingleProduct /> },
       { path: 'newproduct', element: <NewProductUpload /> },
       { path: 'allorders', element: <AllOrders /> },
-      // { path: 'alltransactions', element: <SingleProduct/>},
+      { path: 'usercart', element: <UserCart/>},
       { path: 'passwordrecovery', element: <PasswordRecovery /> },
       { path: 'passwordchange', element: <PasswordUpdate /> },
       { path: 'profile', element: <UserProfile /> },

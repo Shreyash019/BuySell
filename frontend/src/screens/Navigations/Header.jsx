@@ -8,12 +8,14 @@ import { IoListCircleOutline, IoCartOutline, IoLogOutOutline } from "react-icons
 import { GrTransaction } from "react-icons/gr";
 import { LuShoppingBag, LuClipboardList } from "react-icons/lu";
 import { MdOutlineSell, MdOutlinePrivacyTip } from "react-icons/md";
+import { MdShoppingCart } from "react-icons/md";
 
 
 const Header = () => {
 
   const navigate = useNavigate()
   const [navActive, setNavActive] = useState(false);
+  let cart = undefined;
 
   const handleSideNavNavigation = (navPath) => {
     switch (navPath) {
@@ -87,6 +89,11 @@ const Header = () => {
         navigate('auth');
         break;
 
+      case "usercart":
+        setNavActive(false);
+        navigate('/usercart');
+        break;
+
       default:
         toast.error('Navigation not exist');
         setNavActive(false);
@@ -97,13 +104,14 @@ const Header = () => {
   return (
     <div className='w-[100%] h-auto overflow-auto'>
       <div className='w-[100%] h-auto overflow-auto float-left'>
-        <div className='w-[100%] h-16 float-left fixed overflow-auto bg-black'>
+        <div className='w-[100%] h-16 float-left fixed top-0 overflow-auto bg-black'>
           <div className='w-auto h-full flex items-center justify-center'>
             <div className='w-[15%] sm:w-[25%] h-auto float-left flex items-center justify-center'>
               <span className='bg-black text-white sm:text-xs rounded-full px-4 py-2 cursor-pointer' onClick={() => handleSideNavNavigation('home')}>Buy & Sell</span>
             </div>
             <div className='w-[85%] sm:w-[75%] h-auto float-left text-white flex items-center justify-end'>
               <div className='w-[100%] h-auto text-3xl font-bold px-4 flex items-center justify-end'>
+                <p className='mr-8 flex items-center justify-end' onClick={() => handleSideNavNavigation('usercart')}><MdShoppingCart /><i className='text-[0.75rem] text-red'>{cart ? '' : 0}</i></p>
                 {navActive ? <><IoMdCloseCircleOutline onClick={() => setNavActive(false)} /> </> : <><CgMenuRound onClick={() => setNavActive(true)} /> </>}
               </div>
             </div>
@@ -178,7 +186,9 @@ const Header = () => {
               </div>
             </div>
           </div>
-          : <></>}
+          :
+          <></>
+        }
       </div>
     </div>
 
