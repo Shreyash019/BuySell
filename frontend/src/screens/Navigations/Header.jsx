@@ -111,7 +111,7 @@ const Header = () => {
             </div>
             <div className='w-[85%] sm:w-[75%] h-auto float-left text-white flex items-center justify-end'>
               <div className='w-[100%] h-auto text-3xl font-bold px-4 flex items-center justify-end'>
-                <p className='mr-8 flex items-center justify-end' onClick={() => handleSideNavNavigation('usercart')}><MdShoppingCart /><i className='text-[0.75rem] text-red'>{cart ? '' : 0}</i></p>
+                <p className='sm:text-2xl mr-8 sm:mr-4 flex items-center justify-end' onClick={() => handleSideNavNavigation('usercart')}><MdShoppingCart /><i className='text-[0.75rem] text-red'>{cart ? '' : 0}</i></p>
                 {navActive ? <><IoMdCloseCircleOutline onClick={() => setNavActive(false)} /> </> : <><CgMenuRound onClick={() => setNavActive(true)} /> </>}
               </div>
             </div>

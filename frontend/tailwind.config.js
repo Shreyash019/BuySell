@@ -16,7 +16,7 @@ module.exports = {
       },
       colors: {
         "red": "#ff0000",
-        "subNav": "#ffe0b3",
+        "subNav": "#ffd9b3",
         "sideNav": "#404040",
         "borderColor": "#f2f2f2",
         "btnTypeDef": "#d9d9d9",
@@ -33,6 +33,7 @@ module.exports = {
         "reviewCardBg": "#99bbff",
         "locTextColor": "#737373",
         "noCartBg": "#ff0066",
+        "noCartBgHover": "#e6005c",
         "textGrayFrt": "#a6a6a6",
       }
     },
