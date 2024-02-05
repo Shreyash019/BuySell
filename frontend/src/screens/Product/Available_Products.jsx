@@ -19,7 +19,7 @@ const Available_Products = () => {
       {/* Product Start */}
       <div className='lg:w-[80%] md:w-[73%] sm:w-[100%] min-h-[40rem] h-auto float-left flex flex-wrap items-start justify-center overflow-auto'>
         <p className='w-[99%] h-auto px-4 mb-4 text-4xl md:text-3xl sm:text-2xl text-center font-bold'>Available Products</p>
-        <div className='w-auto h-auto py-4 grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 auto-rows-max gap-4 md:gap-2.5'>
+        <div className='w-auto h-auto py-4 place-items-center grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 auto-rows-max gap-4 md:gap-2.5'>
           {numMap.map((data) => {
             return (
               <ShowProducts key={data} numData={data} />
