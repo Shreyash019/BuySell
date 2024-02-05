@@ -4,7 +4,8 @@ import toast from 'react-hot-toast';
 import { CgMenuRound, CgProfile } from "react-icons/cg";
 import { IoMdCloseCircleOutline, IoIosHelpCircleOutline } from "react-icons/io";
 import { RiLockPasswordLine, RiCustomerService2Line } from "react-icons/ri";
-import { IoListCircleOutline, IoCartOutline, IoLogOutOutline } from "react-icons/io5";
+// import { IoListCircleOutline, IoCartOutline, IoLogOutOutline } from "react-icons/io5";
+import { IoListCircleOutline, IoCartOutline } from "react-icons/io5";
 import { GrTransaction } from "react-icons/gr";
 import { LuShoppingBag, LuClipboardList } from "react-icons/lu";
 import { MdOutlineSell, MdOutlinePrivacyTip } from "react-icons/md";
@@ -104,7 +105,7 @@ const Header = () => {
   return (
     <div className='w-[100%] h-auto overflow-auto'>
       <div className='w-[100%] h-auto overflow-auto float-left'>
-        <div className='w-[100%] h-16 float-left fixed top-0 overflow-auto bg-black'>
+        <div className='w-[100%] h-16 float-left fixed top-0 overflow-auto bg-black z-50'>
           <div className='w-auto h-full flex items-center justify-center'>
             <div className='w-[15%] sm:w-[25%] h-auto float-left flex items-center justify-center'>
               <span className='bg-black text-white sm:text-xs rounded-full px-4 py-2 cursor-pointer' onClick={() => handleSideNavNavigation('home')}>Buy & Sell</span>

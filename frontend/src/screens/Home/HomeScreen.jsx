@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import ShowProducts from './ShowProducts';
 import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
-import { CiStar } from "react-icons/ci";
 import { FcRatings } from "react-icons/fc";
 
 const HomeScreen = () => {
@@ -71,11 +70,8 @@ const HomeScreen = () => {
                 </div>
               </div>
               <div className='w-[100%] h-[9rem] p-2 float-left bg-reviewCardBg'>
-                <div className='w-[100%] h-auto my-1 flex items-center justify-center'>
-                  <p className='w-auto max-w-[100%] h-auto text-sm truncate overflow-hidden flex'><CiStar /><CiStar /><CiStar /><CiStar /><CiStar /></p>
-                </div>
-                <div className='w-[100%] h-[6rem] py-1 px-4 block overflow-hidden'>
-                  <p className='w-[100%] h-auto text-sm font-normal line-clamp-4'>
+                <div className='w-[100%] h-[8rem] py-1 px-4 block overflow-hidden'>
+                  <p className='w-[100%] h-auto text-sm font-normal line-clamp-5'>
                     Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum Lorem epsum.
                   </p>
                 </div>

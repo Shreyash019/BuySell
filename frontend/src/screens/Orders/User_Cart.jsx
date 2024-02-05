@@ -1,22 +1,24 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate} from 'react-router-dom';
 import { RiShoppingBag3Fill } from "react-icons/ri";
 import { SiWindicss } from "react-icons/si";
 import { RiDeleteBinLine } from "react-icons/ri";
 
 const User_Cart = () => {
+    const navigate = useNavigate()
     let rndom = 'https://img.buzzfeed.com/buzzfeed-static/static/2018-06/11/11/asset/buzzfeed-prod-web-02/sub-buzz-12985-1528730443-3.jpg'
-    const [isCart, setIsCart] = useState(false);
+    const [isCart, setIsCart] = useState(true);
 
     useEffect(() => { }, [isCart])
 
     return (
         <div>
-            <div className='w-[100%] min-h-[30rem] sm:min-h-[32rem] h-auto overflow-auto flex items-center justify-center' onClick={() => setIsCart(!isCart)}>
+            <div className='w-[100%] min-h-[30rem] sm:min-h-[32rem] h-auto overflow-auto flex items-center justify-center'>
                 {isCart ?
                     <div className='w-[50%] md:w-[80%] sm:w-[99%] h-auto my-16 sm:my-6 overflow-auto'>
                         <div className='w-full h-auto p-4 sm:py-2 mb-4 sm:mb-2 float-left border border-borderColor rounded-md flex items-center justify-center overflow-auto'>
                             <p className='w-[50%] h-auto float-left text-sm font-semibold text-left'>1 ITEMS ADDED</p>
-                            <p className='w-[50%] h-auto float-left text-xl text-noCartBg hover:bg-noCartBgHover flex items-center justify-end'><RiDeleteBinLine /></p>
+                            <p className='w-[50%] h-auto float-left text-xl text-noCartBg hover:text-noCartBgHover flex items-center justify-end'><RiDeleteBinLine onClick={() => setIsCart(false)}/></p>
                         </div>
                         <div className='w-full h-[12rem] sm:h-[10rem] my-4 sm:my-2 float-left border rounded-md overflow-hidden'>
                             <div className='w-[35%] sm:w-[40%] h-full float-left bg-borderColor'>
@@ -77,14 +79,14 @@ const User_Cart = () => {
                         </div>
                         <div className='w-[100%] h-[4.25rem] mt-12 float-left bg-subNav'>
                             <p className='w-full h-[1.5rem] px-4 text-[0.7rem] flex items-center justify-center'>1 Product selected for order</p>
-                            <button className='w-full h-[2.75rem] bg-noCartBg hover:bg-noCartBgHover flex items-center justify-center text-sm text-white font-bold'>PLACE ORDER</button>
+                            <button className='w-full h-[2.75rem] bg-noCartBg hover:bg-noCartBgHover flex items-center justify-center text-sm text-white font-bold' onClick={()=>navigate('/payment')}>PLACE ORDER</button>
                         </div>
                     </div>
                     :
                     <div>
                         <div className='w-full h-auto float-left mt-4 overflow-auto flex items-center justify-center'>
                             <SiWindicss className='text-[5rem] sm:text-[3rem] text-imgBgColorHover mr-8' />
-                            <RiShoppingBag3Fill className='text-noCartBg text-[12rem] sm:text-[6rem]' />
+                            <RiShoppingBag3Fill className='text-noCartBg text-[12rem] sm:text-[6rem]' onClick={() => setIsCart(true)}/>
                         </div>
                         <div className='w-full h-auto mt-8 float-left overflow-auto'>
                             <p className='text-xl sm:text-sm font-bold text-center'>Seems no gravity pull!, Hurry up do something!</p>

@@ -16,7 +16,7 @@ import UserProfile from './screens/User/User_Profile';
 import NewProductUpload from './screens/Product/New_Product_Upload';
 import MySingleProduct from './screens/Product/My_Single_Product';
 import UserCart from "./screens/Orders/User_Cart";
-
+import PaymentPage from "./screens/Transactions/PaymentPage";
 import TermCondition from "./screens/Utility/TermCondition";
 import PrivacyPolicy from "./screens/Utility/PrivacyPolicy";
 import HelpPage from "./screens/Utility/HelpPage";
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       { path: 'passwordrecovery', element: <PasswordRecovery /> },
       { path: 'passwordchange', element: <PasswordUpdate /> },
       { path: 'profile', element: <UserProfile /> },
-
+      { path: 'payment', element: <PaymentPage/>},
       { path: 'termcondition', element: <TermCondition/>},
       { path: 'privacypolicy', element: <PrivacyPolicy /> },
       { path: 'help', element: <HelpPage /> },
