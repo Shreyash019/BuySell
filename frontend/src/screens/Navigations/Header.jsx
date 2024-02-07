@@ -17,6 +17,7 @@ const Header = () => {
   const navigate = useNavigate()
   const [navActive, setNavActive] = useState(false);
   let cart = undefined;
+  let logo = 'https://cdn-icons-png.flaticon.com/512/2438/2438746.png'
 
   const handleSideNavNavigation = (navPath) => {
     switch (navPath) {
@@ -105,10 +106,10 @@ const Header = () => {
   return (
     <div className='w-[100%] h-auto overflow-auto'>
       <div className='w-[100%] h-auto overflow-auto float-left'>
-        <div className='w-[100%] h-16 float-left fixed top-0 overflow-auto bg-black z-50'>
+        <div className='w-[100%] h-16 float-left fixed top-0 overflow-auto bg-noCartBg z-50'>
           <div className='w-auto h-full flex items-center justify-center'>
             <div className='w-[15%] sm:w-[25%] h-auto float-left flex items-center justify-center'>
-              <span className='bg-black text-white sm:text-xs rounded-full px-4 py-2 cursor-pointer' onClick={() => handleSideNavNavigation('home')}>Buy & Sell</span>
+              <span className='h-8 bg-gradient-to-r from-logo to-logoText text-transparent bg-clip-text text-3xl sm:text-xs font-extrabold cursor-pointer flex items-center justify-center' onClick={() => handleSideNavNavigation('home')}>B&nbsp;<img className='w-8 h-8' src={logo} alt='logo'/>&nbsp;S</span>
             </div>
             <div className='w-[85%] sm:w-[75%] h-auto float-left text-white flex items-center justify-end'>
               <div className='w-[100%] h-auto text-3xl font-bold px-4 flex items-center justify-end'>

@@ -16,6 +16,13 @@ module.exports = {
       },
       colors: {
         "red": "#ff0000",
+        "navy" :"#000080",
+        "navyLight": "#3333ff",
+        "gold": '#ffd700',
+        "brown": "#a52a2a",
+        "logo": "#00ffff",
+        "logoText": "#00e6e6",
+        "brownDark": "#511515",
         "subNav": "#ffd9b3",
         "sideNav": "#404040",
         "borderColor": "#f2f2f2",
