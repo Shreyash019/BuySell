@@ -17,10 +17,12 @@ module.exports = {
       colors: {
         "red": "#ff0000",
         "navy" :"#000080",
-        "navyLight": "#3333ff",
+        "navyLight": "#3366ff",
+        "skyBlue": "#66ffff",
         "gold": '#ffd700',
         "brown": "#a52a2a",
         "logo": "#00ffff",
+        "spinner": "#fff5cc",
         "logoText": "#00e6e6",
         "brownDark": "#511515",
         "subNav": "#ffd9b3",

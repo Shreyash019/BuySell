@@ -113,7 +113,7 @@ const Header = () => {
             </div>
             <div className='w-[85%] sm:w-[75%] h-auto float-left text-white flex items-center justify-end'>
               <div className='w-[100%] h-auto text-3xl font-bold px-4 flex items-center justify-end'>
-                <p className='sm:text-2xl mr-8 sm:mr-4 flex items-center justify-end' onClick={() => handleSideNavNavigation('usercart')}><MdShoppingCart /><i className='text-[0.75rem] text-red'>{cart ? '' : 0}</i></p>
+                <p className='sm:text-2xl mr-8 sm:mr-4 flex items-center justify-end' onClick={() => handleSideNavNavigation('usercart')}><MdShoppingCart /><i className='text-[0.75rem] text-white'>{cart ? '' : 1}</i></p>
                 {navActive ? <><IoMdCloseCircleOutline onClick={() => setNavActive(false)} /> </> : <><CgMenuRound onClick={() => setNavActive(true)} /> </>}
               </div>
             </div>
@@ -124,7 +124,7 @@ const Header = () => {
         </div>
         {navActive
           ?
-          <div className='w-[100%] h-auto overflow-auto fixed'>
+          <div className='w-[100%] h-auto overflow-auto fixed z-[100]'>
             <div className='w-[70%] md:w-[60%] sm:w-[30%] min-h-screen h-auto float-left backdrop-blur-[0.5px]'></div>
             <div className='w-[30%] md:w-[40%] sm:w-[70%] min-h-screen h-auto ml-[70%] md:ml-[60%] sm:ml-[30%] absolute bg-sideNav overflow-auto'>
               <div className='w-[100%] h-12 flex items-center justify-end px-4 text-3xl text-white'>

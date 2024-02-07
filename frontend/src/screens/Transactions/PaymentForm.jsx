@@ -54,7 +54,7 @@ const PaymentForm = () => {
 
     return (
         <div className='w-[100%] min-h-[40rem] h-auto flex items-center justify-center'>
-            <div className='w-[50%] h-auto p-8 mx-4 mt-16 my-8 shadow-md shadow-imgBgColorHover border border-imgBgColorHover rounded-lg'>
+            <div className='w-[50%] sm:w-[100%] h-auto p-8 mx-4 mt-16 my-8 shadow-md shadow-imgBgColorHover border border-imgBgColorHover rounded-lg'>
                 <form onSubmit={handleSubmit}>
                     <PaymentElement />
                     {/* <div className='w-[100%] h-auto  my-6 flex items-center justify-center'>

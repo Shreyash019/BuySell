@@ -12,7 +12,7 @@ const Entry_Screen = () => {
 
   setTimeout(() => {
     setLoader(false)
-  }, 4000)
+  }, 5000)
 
   useEffect(() => { }, [loader])
   return (
@@ -22,6 +22,8 @@ const Entry_Screen = () => {
         <div className='w-[100%] h-screen flex items-center justify-center'>
           <div className='w-[100%] h-auto p-8'>
             <p className='w-[100%] h-auto text-center my-8 text-xl font-bold'>Welcome to Buy&Sell!</p>
+            {/* <div className='w-[100%] h-auto flex items-center justify-center'><GiBarbedSun className='w-40 h-40 animate-spin text-spinner'/></div> */}
+            
             <img className='w-[20%] mx-[40%] h-auto' src='https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjQ1a2VxenA3MDJ5dW5sY3c5YWxxYXV4ZDNpZng1ampoaXJhMmJrayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/SbtWCS3C8tMUltv5gG/giphy.gif' alt='ewf' />
             <p className='w-[100%] h-auto text-center my-8 text-xl font-bold'>Loading...</p>
           </div>

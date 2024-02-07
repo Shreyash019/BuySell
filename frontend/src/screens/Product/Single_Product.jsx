@@ -9,8 +9,8 @@ const Single_Product = () => {
 
   return (
     <div className='w-[100%] h-auto py-8 overflow-auto flex items-center justify-center'>
-      <div className='w-[84%] sm:w-[94%] h-auto overflow-auto'>
-        <div className='w-[90%] h-auto mx-[5%] my-12 sm: mb-8 flex flex-wrap items-center justify-center'>
+      <div className='w-[84%] sm:w-[100%] h-auto overflow-auto'>
+        <div className='w-[90%] h-auto mx-[5%] my-12 sm:mb-8 flex flex-wrap items-center justify-center'>
           <h1 className='w-[100%] text-2xl font-semibold text-center truncate overflow-auto'>Product Name</h1>
           <hr className='w-[40%] md:w-60% sm:w-[70%]  h-[2px] my-2 rounded-2xl border-none bg-black' />
         </div>
@@ -59,12 +59,12 @@ const Single_Product = () => {
             </div>
           </div>
         </div>
-        <div className='w-[80%] h-auto mx-[10%] float-left mt-28 mb-20 shadow-xl shadow-imgBgColorHover overflow-hidden'>
+        <div className='w-[80%] sm:w-[100%] h-auto mx-[10%] sm:mx-0 float-left mt-28 mb-20 shadow-sm shadow-imgBgColorHover overflow-hidden'>
           {/*  */}
           {bufd.map((data, index) => {
             if (index % 2 === 0) {
               return (
-                <div className='w-[100%] lg:h-[15rem] md:h-[12rem] h-[10rem] float-left overflow-hidden mb-12'>
+                <div className='w-[100%] lg:h-[15rem] md:h-[12rem] h-[10rem] mb-12 float-left overflow-hidden'>
                   <div className='w-[49%] lg:h-[15rem] md:h-[12rem] h-[10rem] float-left overflow-hidden'>
                     <img className='w-[100%] lg:h-[15rem] md:h-[12rem] h-[10rem]' src={defaultImg} alt='def3rev' />
                   </div>
@@ -78,7 +78,7 @@ const Single_Product = () => {
               )
             } else {
               return (
-                <div className='w-[100%] lg:h-[15rem] md:h-[12rem] h-[10rem] float-left overflow-hidden mb-12'>
+                <div className='w-[100%] lg:h-[15rem] md:h-[12rem] h-[10rem] mb-12 float-left overflow-hidden'>
                   <div className='w-[51%] lg:h-[15rem] md:h-[12rem] h-[10rem] float-left px-4 overflow-hidden'>
                     <p className='w-[100%] h-auto font-medium'>Title</p>
                     <p className='w-[100%} h-auto line-clamp-6 lg:text-base md:text-sm text-xs'>

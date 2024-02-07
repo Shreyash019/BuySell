@@ -4,22 +4,26 @@ import { Helmet } from 'react-helmet';
 import ShowProducts from './ShowProducts';
 import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
 import { FcRatings } from "react-icons/fc";
+import { GoDotFill } from "react-icons/go";
 
 const HomeScreen = () => {
 
   const navigate = useNavigate();
+  let bgCard = [
+    'https://static-blog.omniconvert.com/blog/wp-content/uploads/2020/09/21135804/How-to-do-Growth-of-eCommerce-Website-scaled.jpg',
+    'https://www.teikametrics.com/wp-content/uploads/2021/10/Ecom-biz-buyer-ready-blog.jpg',
+    'https://sendbird.imgix.net/cms/20230621_Tips-for-developing-a-successful-ecommerce-app-blog-cover.png',
+
+  ]
   let rvCard = [1, 2, 3]
   const imgDefault = 'https://th.bing.com/th/id/R.bfe2d60471c16d18c445f54f5786b8db?rik=9yxxQ7D8WYbXXA&riu=http%3a%2f%2fwww.dumpaday.com%2fwp-content%2fuploads%2f2018%2f02%2frandom-pictures-32.jpg&ehk=Hl%2bP9CBJ8VGVggmXVQyMXxI8mp8%2bUcLFwnJa0qC1Jjs%3d&risl=&pid=ImgRaw&r=0'
   const [numMap, setNumMap] = useState([1, 2, 3, 4]);
-  // const [bgCol, setBgCol] = useState('https://cmwmarketingagency.com/wp-content/uploads/2019/09/slider2.jpg');
-    const [bgCol, setBgCol] = useState('https://www.ivanapplab.com/images/mcommerce.jpg');
+  const [bgCol, setBgCol] = useState(0);
 
   const handleCorosal = () => {
-    if (bgCol === 'https://www.oppenheimer.com/_assets/images/images/news-and-media/2022/june/ep_44_client_access_2048x1365.jpg') {
-      setBgCol('https://sendbird.imgix.net/cms/20230621_Tips-for-developing-a-successful-ecommerce-app-blog-cover.png')
-    } else {
-      setBgCol('https://www.oppenheimer.com/_assets/images/images/news-and-media/2022/june/ep_44_client_access_2048x1365.jpg')
-    }
+    if(bgCol === 0) setBgCol(1)
+    else if(bgCol === (bgCard.length-1))setBgCol(0)
+    else setBgCol(prev => prev + 1)
   }
 
   useEffect(() => {
@@ -31,16 +35,20 @@ const HomeScreen = () => {
   return (
     <div className='w-[100%] h-auto overflow-auto bg-productBackground'>
       <div className='w-full h-[36rem] md:h-[28rem] sm:h-[16rem] float-left flex items-center justify-center'>
-      <div className={`w-[100%] h-[36rem] md:h-[28rem] sm:h-[16rem]  bg-center bg-no-repeat bg-[length:100%_36rem] md:bg-[length:100%_28rem] sm:bg-[length:100%_16rem]`} style={{ backgroundImage: `url(${bgCol})` }}>
+      <div className={`w-[100%] h-[36rem] md:h-[28rem] sm:h-[16rem] bg-center bg-no-repeat bg-[length:100%_36rem] md:bg-[length:100%_28rem] sm:bg-[length:100%_16rem]`} style={{ backgroundImage: `url(${bgCard[bgCol]})` }}>
           <div className='w-[3%] h-[36rem] md:h-[28rem] sm:h-[16rem] float-start text-white text-2xl flex items-center justify-center' onClick={() => handleCorosal()}><MdOutlineArrowBackIosNew className='animate-pulse' /></div>
-          <div className='w-[94%] h-[36rem] lg:px-16 md:px-12 sm:px-8 md:h-[28rem] sm:h-[16rem] float-start text-white text-2xl flex items-center justify-center'>
-            <div className='w-[100%] h-auto'>
-              <div className="w-full h-auto pb-5 bg-gradient-to-r from-noCartBg to-brownDark text-transparent bg-clip-text">
-                <p className=' text-6xl md:text-4xl sm:text-2xl font-bold break-word mb-4'>Unleash Your Shopping Experience</p>
-                <p className=' text-6xl md:text-4xl sm:text-2xl font-bold break-word mb-6'>Start Buying & Selling Today</p>
-                <p className='w-[100%] h-auto mb-16 text-2xl md:text-xl sm:text-md font-medium bg-gradient-to-r from-navyLight to-navy text-transparent bg-clip-text'>Discover a vibrant marketplace where buying and selling meet effortlessly. Join us to explore a world of unique products and seamless transactions. Welcome to our platform!</p>
+          <div className='w-[94%] h-[36rem] lg:px-12 md:px-8 sm:px-4 md:h-[28rem] sm:h-[16rem] float-start text-white text-2xl flex flex-wrap items-center justify-center overflow-hidden'>
+            <div className='w-[100%] h-auto lg:translate-y-4 sm:translate-y-2'>
+              <div className="w-[60%] sm:w-[70%] h-auto mr-[40%] sm:mr-[30%] bg-gradient-to-r from-noCartBg to-brownDark text-transparent bg-clip-text">
+                <p className='w-[100%] h-auto mb-2 sm:mb-1 text-5xl md:text-2xl sm:text-base font-bold break-word'>Unleash Your Shopping Experience</p>
+                <p className='w-[100%] h-auto mb-8 sm:mb-2 text-5xl md:text-2xl sm:text-base font-bold break-word'>Start Buying & Selling Today</p>
+                <p className='w-[100%] h-auto text-lg md:text-sm sm:text-xs font-normal sm:font-light bg-gradient-to-r from-navyLight to-navy text-transparent bg-clip-text'>Discover a vibrant marketplace where buying and selling meet effortlessly. Join us to explore a world of unique products and seamless transactions. Welcome to our platform!</p>
               </div>
-
+            </div>
+            <div className='w-[100%] h-4 bottom-0 lg:translate-y-6 flex items-center justify-center'>
+              <GoDotFill className={`${bgCol === 0 ? 'text-sideNav' : 'text-borderColor'} sm:text-xs sm:mx-0.5 cursor-pointer rounded-full`} onClick={()=>setBgCol(0)}/>
+              <GoDotFill className={`${bgCol === 1 ? 'text-sideNav' : 'text-borderColor'} sm:text-xs sm:mx-0.5 cursor-pointer rounded-full`} onClick={()=>setBgCol(1)}/>
+              <GoDotFill className={`${bgCol === 2 ? 'text-sideNav' : 'text-borderColor'} sm:text-xs sm:mx-0.5 cursor-pointer rounded-full`} onClick={()=>setBgCol(2)}/>
             </div>
           </div>
           <div className='w-[3%] h-[36rem] md:h-[28rem] sm:h-[16rem] float-right text-white text-2xl flex items-center justify-center' onClick={() => handleCorosal()}><MdOutlineArrowForwardIos className='animate-pulse' /></div>
