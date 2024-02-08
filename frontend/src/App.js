@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       { path: 'myproducts', element: <MyProducts /> },
       { path: 'soldproducts', element: <SoldProducts /> },
       { path: 'boughtproducts', element: <BoughtProducts /> },
-      { path: 'singleproduct', element: <SingleProduct /> },
+      { path: 'singleproduct/:id', element: <SingleProduct /> },
       { path: 'mysingleproduct', element: <MySingleProduct /> },
       { path: 'newproduct', element: <NewProductUpload /> },
       { path: 'allorders', element: <AllOrders /> },

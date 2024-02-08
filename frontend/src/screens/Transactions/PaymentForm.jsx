@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { PaymentElement, useStripe, useElements } from '@stripe/react-stripe-js';
 
 const PaymentForm = () => {
@@ -56,15 +56,16 @@ const PaymentForm = () => {
         <div className='w-[100%] min-h-[40rem] h-auto flex items-center justify-center'>
             <div className='w-[50%] sm:w-[100%] h-auto p-8 mx-4 mt-16 my-8 shadow-md shadow-imgBgColorHover border border-imgBgColorHover rounded-lg'>
                 <form onSubmit={handleSubmit}>
+                    <div className='w-[100%}'></div>
                     <PaymentElement />
                     {/* <div className='w-[100%] h-auto  my-6 flex items-center justify-center'>
-                    <button type="submit" disabled={!stripe || !elements} className='w-[100%] px-4 py-2 text-base text-white font-semibold rounded-sm bg-noCartBg hover:bg-noCartBgHover transition-all'>Pay</button>
-                </div> */}
+                        <button type="submit" disabled={!stripe || !elements} className='w-[100%] px-4 py-2 text-base text-white font-semibold rounded-sm bg-noCartBg hover:bg-noCartBgHover transition-all'>Pay</button>
+                    </div> */}
                     {/* Show error message to your customers */}
                     {errorMessage && <div>{errorMessage}</div>}
                 </form>
                 <div className='w-[100%] h-auto mt-8 my-6 flex items-center justify-center'>
-                    <button type="submit" disabled={!stripe || !elements} className='w-[100%] px-4 py-2 text-base text-white font-semibold rounded-sm bg-noCartBg hover:bg-noCartBgHover transition-all' onClick={()=>setTimeout(()=>{navigate('/allorders')}, 800)}>Pay</button>
+                    <button type="submit" disabled={!stripe || !elements} className='w-[100%] px-4 py-2 text-base text-white font-semibold rounded-sm bg-noCartBg hover:bg-noCartBgHover transition-all' onClick={() => setTimeout(() => { navigate('/allorders') }, 800)}>Pay</button>
                 </div>
             </div>
 

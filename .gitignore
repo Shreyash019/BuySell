@@ -4,6 +4,8 @@
 node_modules
 .pnp
 .pnp.js
+txt.txt
+products.json
 
 # testing
 /coverage
