@@ -4,7 +4,8 @@ import productJson from '../../products.json';
 
 const Single_Product = () => {
 
-  const [product, setProduct] = useState()
+  const [product, setProduct] = useState();
+  const [idx, setIdx] = useState(0)
   const { id } = useParams()
   const navigate = useNavigate()
   const defaultImg = 'https://sendbird.imgix.net/cms/20230621_Tips-for-developing-a-successful-ecommerce-app-blog-cover.png';
@@ -16,7 +17,7 @@ const Single_Product = () => {
       }
     })
     setProduct(filterData[0])
-  }, [product])
+  }, [product, idx])
 
   return (
     <>
@@ -31,27 +32,27 @@ const Single_Product = () => {
               </div>
               <div className='w-[50%] sm:w-[100%] h-auto mt-4 float-left flex flex-wrap items-center justify-center overflow-auto'>
                 <div className='w-[94%] h-auto flex items-center justify-center'>
-                  <div className='w-[100%] h-auto px-1 flex items-center justify-center'>
-                    <div className='w-[80%] h-[20rem] md:w-[21rem] md:h-[18rem] sm:w-[18rem] sm:h-[15rem] flex items-center justify-center border border-sideNav rounded-sm bg-[length:100%_20rem] bg-center bg-no-repeat overflow-hidden' style={{ backgroundImage: `url(${product?.product_Image[0] || ''})` }}>
-                      {product?.product_Image[0] ? <></> : <span className='font-bold text-imgBgColorHover text-3xl md:text-xl sm:text-sm'>No image</span>}
+                  <div className='w-[100%] h-auto px-1 flex items-center justify-center cursor-not-allowed'>
+                    <div className='w-[80%] h-[20rem] md:w-[21rem] md:h-[18rem] sm:w-[18rem] sm:h-[15rem] flex items-center justify-center border border-sideNav rounded-sm bg-[length:100%_20rem] bg-center bg-no-repeat overflow-hidden' style={{ backgroundImage: `url(${product?.product_Image[idx] || ''})` }}>
+                      {product?.product_Image[idx] ? <></> : <span className='font-bold text-imgBgColorHover text-3xl md:text-xl sm:text-sm'>No image</span>}
                     </div>
                   </div>
                 </div>
                 <div className='w-[80%] h-auto flex flex-wrap items-center justify-center'>
+                  {product?.product_Image[0]
+                    ? <div className='w-20 h-20 m-2 border border-sideNav rounded-sm bg-[length:5rem_5rem] bg-center bg-no-repeat cursor-pointer' style={{ backgroundImage: `url(${product?.product_Image[0] || ''})` }} onClick={()=>setIdx(0)}></div>
+                    : <></>
+                  }
                   {product?.product_Image[1]
-                    ? <div className='w-20 h-20 m-2 border border-sideNav rounded-sm bg-[length:5rem_5rem] bg-center bg-no-repeat' style={{ backgroundImage: `url(${product?.product_Image[1] || ''})` }}></div>
+                    ? <div className='w-20 h-20 m-2 border border-sideNav rounded-sm bg-[length:5rem_5rem] bg-center bg-no-repeat cursor-pointer' style={{ backgroundImage: `url(${product?.product_Image[1] || ''})` }} onClick={()=>setIdx(1)}></div>
                     : <></>
                   }
                   {product?.product_Image[2]
-                    ? <div className='w-20 h-20 m-2 border border-sideNav rounded-sm bg-[length:5rem_5rem] bg-center bg-no-repeat' style={{ backgroundImage: `url(${product?.product_Image[2] || ''})` }}></div>
+                    ? <div className='w-20 h-20 m-2 border border-sideNav rounded-sm bg-[length:5rem_5rem] bg-center bg-no-repeat cursor-pointer' style={{ backgroundImage: `url(${product?.product_Image[2] || ''})` }} onClick={()=>setIdx(2)}></div>
                     : <></>
                   }
                   {product?.product_Image[3]
-                    ? <div className='w-20 h-20 m-2 border border-sideNav rounded-sm bg-[length:5rem_5rem] bg-center bg-no-repeat' style={{ backgroundImage: `url(${product?.product_Image[3] || ''})` }}></div>
-                    : <></>
-                  }
-                  {product?.product_Image[4]
-                    ? <div className='w-20 h-20 m-2 border border-sideNav rounded-sm bg-[length:5rem_5rem] bg-center bg-no-repeat' style={{ backgroundImage: `url(${product?.product_Image[4] || ''})` }}></div>
+                    ? <div className='w-20 h-20 m-2 border border-sideNav rounded-sm bg-[length:5rem_5rem] bg-center bg-no-repeat cursor-pointer' style={{ backgroundImage: `url(${product?.product_Image[3] || ''})` }} onClick={()=>setIdx(3)}></div>
                     : <></>
                   }
                 </div>

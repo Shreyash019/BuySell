@@ -86,13 +86,13 @@ const User_Cart = () => {
                     <div>
                         <div className='w-full h-auto float-left mt-4 overflow-auto flex items-center justify-center'>
                             <SiWindicss className='text-[5rem] sm:text-[3rem] text-imgBgColorHover mr-8' />
-                            <RiShoppingBag3Fill className='text-noCartBg text-[12rem] sm:text-[6rem]' onClick={() => setIsCart(true)}/>
+                            <RiShoppingBag3Fill className='text-noCartBg text-[12rem] sm:text-[6rem]'/>
                         </div>
                         <div className='w-full h-auto mt-8 float-left overflow-auto'>
                             <p className='text-xl sm:text-sm font-bold text-center'>Seems no gravity pull!, Hurry up do something!</p>
                             <p className='text-md sm:text-xs text-center text-textGrayFrt my-2'>There is nothing in you bag. Let's add something.</p>
                             <div className='w-full h-auto p-4 flex items-center justify-center'>
-                                <button className='px-4 py-2 my-2 bg-noCartBg hover:bg-noCartBgHover text-sm sm:text-xs text-white font-bold rounded-md'>Products</button>
+                                <button className='px-4 py-2 my-2 bg-noCartBg hover:bg-noCartBgHover text-sm sm:text-xs text-white font-bold rounded-md' onClick={()=>navigate('/allproducts')}>Products</button>
                             </div>
                         </div>
                     </div>

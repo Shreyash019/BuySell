@@ -10,10 +10,10 @@ const ShowProducts = ({product}) => {
         setRandomImage('https://assets.ajio.com/medias/sys_master/root/20220601/ddAf/62967eccaeb26921affef4b2/-473Wx593H-464415501-multi-MODEL.jpg')
     }, [])
     return (
-        <div className='w-48 md:w-40 sm:w-36 h-56 md:h-48 sm:h-44 m-2 bg-white rounded-xl shadow-lg border border-borderColor' onClick={()=>navigate(`/singleproduct/${product._id}`)}>
+        <div className='w-48 md:w-40 sm:w-36 h-56 md:h-48 sm:h-44 m-2 bg-white rounded-xl shadow-sm hover:shadow-lg border border-borderColor' onClick={()=>navigate(`/singleproduct/${product._id}`)}>
             <div className='w-[100%] h-auto'>
                 <div className='w-[100%] h-36 md:h-28 sm:h-24 p-3 overflow-hidden'>
-                    <img className='w-[100%] h-36 md:h-28 sm:h-24 rounded-md' src={product.product_Image[0]} alt='productImage' title='productImage' />
+                    <img className='w-[100%] h-36 md:h-28 sm:h-24 rounded-md transition-transform duration-300 transform hover:scale-105' src={product.product_Image[0]} alt='productImage' title='productImage' />
                 </div>
                 <div className='w-[100%] h-auto flex items-center justify-start'>
                     <p className='w-[100%] h-auto px-3 sm:my-1 block text-lg md:text-md sm:text-sm font-medium truncate overflow-hidden'>{product.product_Name}</p>

@@ -12,7 +12,7 @@ const Entry_Screen = () => {
 
   setTimeout(() => {
     setLoader(false)
-  }, 5000)
+  }, 2500)
 
   useEffect(() => { }, [loader])
   return (
